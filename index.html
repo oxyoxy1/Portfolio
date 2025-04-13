@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #24292e;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #0366d6;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project-card h3 {
+            margin-top: 0;
+            color: #0366d6;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .status-wip {
+            background-color: #fbc02d;
+            color: #000;
+        }
+        
+        .status-completed {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            margin-right: 1rem;
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        
+        form {
+            background: white;
+            padding: 2rem;
+            border-radius: 6px;
+            border: 1px solid #e1e4e8;
+            margin-top: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #22863a;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #24292e;
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kenneth Gauthier (oxyoxy1)</h1>
+            <p>A showcase of my work and coding journey</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase my projects.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/portfolio-website" target="_blank">View on GitHub</a>
+                        <a href="https://oxyoxy1.github.io/portfolio-website" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>Startup Cleaner</h3>
+                    <p>enable/disable startup devices.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/StartupCleaner" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>SkyLoco</h3>
+                    <p>Weather application for desktop (windows 10).</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/SkyLoco" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>SecRAW</h3>
+                    <p>ui-less basic antimalware.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/SecRaw" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 5 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>ParlayWizard</h3>
+                    <p>NBA stat-tracking companion for parlays.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/ParlayWizard" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 6 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>YTmp3DL</h3>
+                    <p>Windows based application that takes YouTube URL's and converts them to mp3 or wav files.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/YTmp3DL" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 7 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>Flappy Bird (Windows Remake)</h3>
+                    <p>A Flappy Bird remake for windows pcs.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/FlappyBird-Windows" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 8 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>QuickShelf</h3>
+                    <p>Smart Desktop Organizer.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/QuickShelf" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 9 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>Username Generator</h3>
+                    <p>Program to generate you usernames.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/UsernameGenerator" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 10 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>Amazon Price Scout</h3>
+                    <p>Windows application to view prices on Amazon for a specified product.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/AmazonPriceScout" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 11 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>AI Resume Analyzer</h3>
+                    <p>Resume analyzer using AI and machine learning to critique your resume based on the desired position's description.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/AIResumeAnalyzer" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 12 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>Space Shooter</h3>
+                    <p>Indie retro shooting game.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/SpaceShooter" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 13 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>ISG</h3>
+                    <p>Interactive Story/Narrative Generator.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/ISG" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 14 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>Death Before Dishonor</h3>
+                    <p>indie fighting game.</p>
+                </div>
+				
+				<!-- Project 15 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>SentinelGuard</h3>
+                    <p>free antivirus software.</p>
+                </div>
+				
+				<!-- Project 16 -->
+                <div class="project-card">
+                    <span class="status status-wip">Work in Progress</span>
+                    <h3>CodeCompanion</h3>
+                    <p>AI coding assistant.</p>
+                </div>
+				
+				<!-- Project 17 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>StickyNoteUI</h3>
+                    <p>sticky notes app for windows.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/StickyNoteUI" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 18 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>BladerSpirit</h3>
+                    <p>this is a website intended to host dates and content for the shadow wizard money gang's beyblading division.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/BladerSpirit" target="_blank">View on GitHub</a>
+						<a href="https://oxyoxy1.github.io/BladerSpirit/" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+				
+				<!-- Project 19 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>SpotifyWrapped</h3>
+                    <p>Spotify Replay companion that turns your top listened to songs into a playlist.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/SpotifyWrapped" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 20 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>ConnectWithMe</h3>
+                    <p>HTML test- just my social links.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/ConnectWithMe" target="_blank">View on GitHub</a>
+						<a href="https://oxyoxy1.github.io/ConnectWithMe/" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+				
+				<!-- Project 21 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>JujuWHORE</h3>
+                    <p>Jujutsu Infinite Companion Bot.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/JujuWHORE" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+				<!-- Project 22 -->
+                <div class="project-card">
+                    <span class="status status-completed">Completed</span>
+                    <h3>StockML</h3>
+                    <p>Rudimentary machine learning program to predict trends in the stock market.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/oxyoxy1/StockML" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+				
+            </div>
+        </section>
+        
+        <section id="project-ideas">
+            <h2>Suggest a Project Idea</h2>
+            <p>Have an idea for a project you'd like to see me work on? Submit it below!</p>
+            
+            <form id="idea-form" action="https://formspree.io/f/xpwpbkpe" method="POST">
+                <input type="hidden" name="_subject" value="New Project Idea Submission from Portfolio">
+                <input type="hidden" name="_format" value="plain">
+                
+                <div class="form-group">
+                    <label for="name">Your Name (optional)</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email (optional)</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-name">Project Name</label>
+                    <input type="text" id="project-name" name="project-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Project Description</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="technologies">Suggested Technologies (optional)</label>
+                    <input type="text" id="technologies" name="technologies" placeholder="e.g., React, Python, MongoDB">
+                </div>
+                
+                <button type="submit">Submit Idea</button>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My GitHub Projects. All rights reserved.</p>
+            <p>Connect with me on <a href="https://github.com/oxyoxy1" style="color: #58a6ff;">GitHub</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('idea-form').addEventListener('submit', function(e) {
+            // Formspree will handle the submission, we just need to show a confirmation
+            const projectName = document.getElementById('project-name').value;
+            alert(`Thank you for your project idea: "${projectName}"! I'll consider it for future work.`);
+            
+            // The form will still submit to Formspree after this alert
+        });
+    </script>
+</body>
+</html>
