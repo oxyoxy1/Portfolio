@@ -1,0 +1,5 @@
+This portfolio is a static website with no backend requirements
+The only external service used is Formspree for the contact form
+If you plan to expand this with backend functionality, you might add:
+flask==2.3.2
+python-dotenv==1.0.0
